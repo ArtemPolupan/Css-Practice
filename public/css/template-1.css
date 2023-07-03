@@ -1,3 +1,8 @@
+:root {
+	--text-color:  #212529;
+	--space-medium:24px;
+}
+
 .page {
 	background: #FFFFFF;
 	padding: 0 15px;
@@ -9,7 +14,7 @@
 }
 
 .header {
-	padding: 24px;
+	padding: var(--text-medium, 24px);
 	border-bottom: 1px solid #dee2e6 ;
 }
 
@@ -35,7 +40,7 @@ text-decoration: none;
 
 .nav_link:hover {
 	text-decoration: underline;
-	color: blue;
+	opacity: 50%;
 }
 
 .nav_vertical > .nav_link {
@@ -43,7 +48,7 @@ text-decoration: none;
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-	margin-right: 24px;
+	margin-right: var(--text-medium, 24px);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
@@ -60,7 +65,7 @@ text-decoration: none;
 }
 
 .footer {
-	padding: 24px, 0;
+	padding: var(--text-medium, 24px), 0;
 	border-top: 1px solid #dee2e6 ;
 }
 
@@ -73,14 +78,14 @@ text-decoration: none;
 
 .footer_title {
 	font-size: 20px;
-	color: #212529;
+	color: var(--text-color, var(--text-color, #212529));
 	display: block;
 	margin-bottom: 12px;
 }
 
 .hero_title {
 	font-size: 56px;
-	color: #212529;
+	color: var(--text-color, var(--text-color, #212529));
 	font-weight: 500;
 	margin-bottom: 12px;
 	text-align: center;
@@ -88,39 +93,39 @@ text-decoration: none;
 
 .hero_text {
 	font-size: 20px;
-	color: #212529;
+	color: var(--text-color, var(--text-color, #212529));
 	text-align: center;
 	max-width: 585px;
 	margin: 0 auto;
 }
 
 .plans_card:not(:last-of-type) {
-	margin-right: 24px;
+	margin-right: var(--text-medium, 24px);
 }
 
 .card-header {
 	padding: 12px;
 	text-align: center;
-	font-size: 24px;
-	color: #212529;
+	font-size: var(--text-medium, 24px);
+	color: var(--text-color, var(--text-color, #212529));
 }
 
 .card-body {
-	padding: 24px;
+	padding: var(--text-medium, 24px);
 }
 
 .card_block {
 	text-align: center;
-	margin-bottom: 24px;
+	margin-bottom: var(--text-medium, 24px);
 }
 
 .card_block:not(:last-of-type) {
-	margin-bottom: 24px;
+	margin-bottom: var(--text-medium, 24px);
 }
 
 .card_price_amount {
 	font-size: 40px;
-	color: #212529;
+	color: var(--text-color, var(--text-color, #212529));
 }
 
 .card_price_duration {
@@ -130,7 +135,7 @@ text-decoration: none;
 
 .card_description_item {
 	font-size: 16px;
-	color: #212529;
+	color: var(--text-color, var(--text-color, #212529));
 	display: block;
 	text-align: center;
 }
@@ -156,6 +161,8 @@ text-decoration: none;
 	outline: 2px solid black;
 	outline-offset: 4px;
 	box-shadow: 5px 5px 10px 2px rgba(116, 169, 255, 0.253);
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
 .btn {
@@ -170,11 +177,84 @@ h1 {
 	text-shadow: 0px 0px 10px red;
 }
 
-.plans_card:nth-child(2) {
+/* .plans_card:nth-child(2) {
 	visibility: hidden;
-}
+} */
 
 .hero_text {
 	background: gray;
 	hyphens: manual;
+}
+
+
+/* .page {
+	background-image: url('/img/test3.jpg');
+	background-repeat: no-repeat;
+	background-position:left;
+	background-size: cover;
+	background-attachment: fixed;
+} */
+
+.hero_text {
+	padding: 40px ;
+	color: orange;
+
+	border-image-source: url('/img/test3.jpg');
+	border-image-width:10% 10%;
+	border-image-slice:10% 10%;;
+	border-image-outset: 40px;
+
+}
+
+.card_block {
+	/* list-style-type: upper-roman; */
+	list-style-position: inside ;
+	padding: 0;
+	list-style-image: linear-gradient(to bottom right, blue, red) ;
+}
+
+.card_description_item {
+	display: list-item;
+}
+
+/* .table tr {
+	border: 1px solid #343A40;
+} */
+
+.table  tr td {
+	border: 1px solid #4f6983;
+	border-bottom-color: red;
+	border-right-color: blue;
+}
+
+.table {
+	table-layout: auto;
+	width: 600px;
+	border-collapse: unset;
+	border-spacing: 20px 10px;
+	caption-side: top;
+}
+
+.nav_link::before, .nav_link::after {
+	/* content: url('/img/test3.jpg'); */
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	background-image: url('/img/test3.jpg'); ;
+}
+
+.nav_link::before {
+	margin-right:  15px;
+}
+
+.nav_link::after {
+	margin-left: 15px;
+}
+
+.calc {
+	width: 600px;
+	margin: 0;
+	margin-left: calc(50% - (600px / 2));
 }
