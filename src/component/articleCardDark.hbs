@@ -1,0 +1,19 @@
+<div class="articles">
+	<div class="articles_head">
+		<h4 class="articles_title">Our Articles</h4>
+		<a href="#" class="view_all">View All</a>
+	</div>
+	<div class="card">
+		{{#each data}}
+		<div class="card_content">
+			<img src="{{photo}}" alt="card_photo" class="card_photo">
+			{{#if isNew}}
+			<div class="budge">NEW</div>
+			{{/if}}
+			<strong class="card_name">{{name}}</strong>
+			<p class="card_text">{{description}}</p>
+			<a href="#" class="card_button">Read All</a>
+		</div>
+		{{/each}}
+	</div>
+</div>

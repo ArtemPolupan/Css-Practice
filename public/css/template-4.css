@@ -3,7 +3,7 @@
 	--space-xm: 16px;
 	--space-l: 24px;
 	--space-big: 36px;
-	--space-sec:  80px;
+	--space-sec:  60px;
 
 	--size-s: 14px;
 	--size-d: 16px;
@@ -12,6 +12,7 @@
 	--border-radius: 12px;
 	--weight-title: 500px;
 	--weight-text: 400;
+	--width-page: 1150px;
 
 	--color-border: #dee2e6; 
 	--color-primary: rgb(46, 46, 255); 
@@ -27,6 +28,7 @@
 	padding: 0 15px;
 	display: flex;
 	justify-content: center;
+	font-family: Roboto, serif;
 }
 
 .page_content {
@@ -63,7 +65,8 @@
 }
 
 .nav_inline {
-	gap: var(--space-l)
+	gap: var(--space-l);
+	flex-direction: column;
 }
 
 .nav_vertical {
