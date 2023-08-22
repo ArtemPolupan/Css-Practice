@@ -415,16 +415,7 @@ body:hover .modal {
 	}
 }
 
-.hero_container {
-	container-type: inline-size;
-	container-name: hero;
-}
 
-@container hero (width < 960px) {
-	.hero {
-		flex-direction: column;
-	}
-}
 
 @layer style {
 	.card_button {
